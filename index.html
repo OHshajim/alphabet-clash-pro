@@ -20,23 +20,30 @@
 
         <!-- home screen -->
         <section class="min-h-screen flex  justify-center items-center hidden">
-        <div class="flex flex-col items-center   text-white gap-8">
-            <h1 class="text-9xl anton font-normal ">ALPHABET CLASH</h1>
-            <p class="text-2xl font-medium">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-            <button class="btn bg-white font-semibold  text-black px-4 text-2xl">Play Now</button>
+            <div class="flex flex-col items-center   text-white gap-8">
+                <h1 class="text-9xl anton font-normal ">ALPHABET CLASH</h1>
+                <p class="text-2xl font-medium">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <button class="btn bg-white font-semibold  text-black px-4 text-2xl">Play Now</button>
 
-        </div>
+            </div>
         </section>
 
         <!-- playground -->
-        <section class="min-h-screen flex justify-center ">
-            <div>
+        <section class="min-h-screen flex justify-center hidden">
+            <div class=" flex flex-col justify-center gap-14">
                 <!-- screen to type -->
                 <div class="border-[20px] border-[#010313cc] rounded-2xl bg-[#FFFFFFB3]">
-                    <div class="artboard artboard-horizontal phone-6">1024×320</div>
+                    <div class="artboard artboard-horizontal phone-6">
+                        <div class="text-white flex justify-center ">
+                            <p class="bg-[#2F2941] px-5 pt-0 pb-2 rounded-b-lg">Don't watch keyboard while playing...</p>
+                        </div>
+                        <div class="flex justify-center items-center h-full">
+                            <p class="text-black text-9xl font-semibold">Y</p>
+                        </div>
+                    </div>
                 </div>
                 <!-- key-board -->
-                <div>
+                <div class="">
                     <div class="flex justify-center gap-1 my-1 w-full">
                         <kbd class="kbd">q</kbd>
                         <kbd class="kbd">w</kbd>
@@ -72,24 +79,27 @@
                     </div>
                 </div>
                 <!-- life-score -->
-                <div>
-                    <button class="btn">
-                        Button
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-                      </button>
-                      <button class="btn">
-                        Button
-                        
-                      </button>
+                <div class="flex justify-between inter font-medium">
+
+                    <button class="btn rounded-full px-7 bg-[#894189] text-white">
+                        Life
+                        <img src="./images/Group 23.png" alt="icon">
+                        <span>1</span>
+                    </button>
+                    <button class="btn rounded-full px-7 bg-[#360490] text-white">
+                        Score
+                        <img src="./images/monetization_on.jpg" alt="icon">
+                        <span>1</span>
+                    </button>
                 </div>
             </div>
         </section>
 
         <!-- score screen -->
-        <section class="min-h-screen flex justify-center hidden">
-            <div>
-                <h3 class="text-white">Score : 14</h3>
-                <button class="btn bg-white font-semibold  text-black px-4 text-2xl">Play Now</button>
+        <section class="min-h-screen flex justify-center items-center">
+            <div class=" text-center border space-y-7 bg-gradient-to-br from-[#ffffff9b] to-[#FFFFFF33] p-7 rounded-2xl" >
+                <h3 class="text-white text-6xl font-extrabold">Score : <span class="font-medium">14</span></h3>
+                <button class="btn bg-white font-semibold border-none text-black px-4 text-2xl">Play Again</button>
                 <p class="text-white">Practice will make you Pro</p>
 
             </div>
