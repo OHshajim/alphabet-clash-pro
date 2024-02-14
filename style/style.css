@@ -1,7 +1,23 @@
 /* font style */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500&family=Poppins:wght@400;500;600;700;800&display=swap');
 
- .font-poppins {
+.poppins {
     font-family: "Poppins", sans-serif;
+}
+
+.anton {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+
+
 }
