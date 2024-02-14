@@ -19,17 +19,17 @@
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center ">
 
         <!-- home screen -->
-        <section class="min-h-screen flex  justify-center items-center hidden">
+        <section id="screen-sec" class="min-h-screen flex  justify-center items-center">
             <div class="flex flex-col items-center   text-white gap-8">
                 <h1 class="text-9xl anton font-normal ">ALPHABET CLASH</h1>
                 <p class="text-2xl font-medium">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="btn bg-white font-semibold  text-black px-4 text-2xl">Play Now</button>
+                <button onclick="play()" class="btn bg-white font-semibold  text-black px-4 text-2xl">Play Now</button>
 
             </div>
         </section>
 
         <!-- playground -->
-        <section class="min-h-screen flex justify-center hidden">
+        <section id="playground" class="min-h-screen flex justify-center hidden">
             <div class=" flex flex-col justify-center gap-14">
                 <!-- screen to type -->
                 <div class="border-[20px] border-[#010313cc] rounded-2xl bg-[#FFFFFFB3]">
@@ -96,7 +96,7 @@
         </section>
 
         <!-- score screen -->
-        <section class="min-h-screen flex justify-center items-center">
+        <section class="min-h-screen flex justify-center items-center hidden">
             <div class=" text-center border space-y-7 bg-gradient-to-br from-[#ffffff9b] to-[#FFFFFF33] p-7 rounded-2xl" >
                 <h3 class="text-white text-6xl font-extrabold">Score : <span class="font-medium">14</span></h3>
                 <button class="btn bg-white font-semibold border-none text-black px-4 text-2xl">Play Again</button>
@@ -104,6 +104,9 @@
 
             </div>
         </section>
+        <!-- js links -->
+        <script src="./script/multi.js"></script>
+        <script src="./script/alpha.js"></script>
     </main>
 </body>
 
