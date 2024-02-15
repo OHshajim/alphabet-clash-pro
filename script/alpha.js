@@ -2,6 +2,7 @@
 function keyButtonPress(event) {
     // pressed key
     const playerPressed = event.key;
+    console.log(playerPressed);
 
     //  target key
     const targetAlphabet = document.getElementById('Letter')
@@ -49,7 +50,8 @@ function keyButtonPress(event) {
         Element.innerText = Life;
         */
         // end game
-        if (Life === 0) {
+        if (Life === 0 ||playerPressed === 'Escape') {
+            removeHiLight(targetLetter);
             gameover();
         };
 
@@ -84,5 +86,8 @@ function play() {
 function gameover() {
     removeElement('playground');
     addElement('score-Board');
+    // update score
+    const lastScore = getTxtValue('score');
+    setValue('last-score', lastScore);
 
 }
