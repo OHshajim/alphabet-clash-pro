@@ -13,7 +13,7 @@ function keyButtonPress(event) {
         // using function
         const currentScore = getTxtValue('score')
         const Score = currentScore + 1;
-        setValue('score',Score)
+        setValue('score', Score)
         /**
          * Manually
          
@@ -36,7 +36,7 @@ function keyButtonPress(event) {
         // using function
         const currentLife = getTxtValue('life')
         const Life = currentLife - 1;
-        setValue('life',Life);
+        setValue('life', Life);
         /**manually  
         // update score
         // 1. get current score
@@ -48,10 +48,11 @@ function keyButtonPress(event) {
         // 3.update score
         Element.innerText = Life;
         */
-        // start a new round
-        
-        removeHiLight(targetLetter);
-        continueGame()
+        // end game
+        if (Life === 0) {
+            gameover();
+        };
+
     };
 }
 //capture keyboard keypress
@@ -68,11 +69,20 @@ function continueGame() {
 }
 
 function play() {
-    // remove  screen
+    // remove  screens
     removeElement('screen-sec');
+    removeElement('score-Board');
     // add play ground section
     addElement('playground');
 
+    // reset value
+    setValue('score', 0);
+    setValue('life', 3)
     // letter related 
     continueGame();
 };
+function gameover() {
+    removeElement('playground');
+    addElement('score-Board');
+
+}
