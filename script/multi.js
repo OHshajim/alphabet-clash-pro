@@ -1,30 +1,42 @@
 // Element remover 
-function removeElement(ID){
+function removeElement(ID) {
     const Element = document.getElementById(ID);
     Element.classList.add('hidden');
- 
- };
- // Element add 
- function addElement(Id){
-     const Element = document.getElementById(Id);
+
+};
+// Element add 
+function addElement(Id) {
+    const Element = document.getElementById(Id);
     Element.classList.remove('hidden');
- };
+};
 //  add hight color and  remove hight color
 
-function AddHiLight(id){
+function AddHiLight(id) {
     const Element = document.getElementById(id);
     Element.classList.add('bg-cyan-600')
 }
-function removeHiLight(id){
+function removeHiLight(id) {
     const Element = document.getElementById(id);
     Element.classList.remove('bg-cyan-600')
 }
 
 //  gat a letter
- function getLetter(){
+function getLetter() {
     const letterStr = "qwertyuiopasdfghjklzxcvbnm/";
     const letters = letterStr.split('');
-    const number = Math.random()*26;
-    const index =Math.round(number);
+    const number = Math.random() * 26;
+    const index = Math.round(number);
     return letters[index];
- };
+};
+//  get score and life value in integer
+function getTxtValue(Id) {
+    const Element = document.getElementById(Id);
+    const ElementText = Element.innerText;
+    const ElementValue = parseInt(ElementText);
+    return ElementValue;
+}
+// set value 
+function setValue(Id, value) {
+    const Element = document.getElementById(Id);
+     Element.innerText = value ;
+}
