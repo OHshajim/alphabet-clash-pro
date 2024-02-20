@@ -1,5 +1,7 @@
 const audio = new Audio();
 let gamePlay = false ;
+const screen = document.getElementById('art-board')
+
 function keyButtonPress(event) {
     if(gamePlay == false) return ;
     // pressed key
@@ -40,11 +42,17 @@ function keyButtonPress(event) {
         // audio
         audio.src = "../audio/negative_beeps.mp3";
         audio.play();
-
+        
+      
         // using function
         const currentLife = getTxtValue('life')
         const Life = currentLife - 1;
         setValue('life', Life);
+
+        const updateLifePercentage = (currentLife/6)*100;
+          // background change 
+          screen.style.background =`linear-gradient(#FFFFFFB3 ${updateLifePercentage}%,red)`;
+
         /**manually  
         // update score
         // 1. get current score
@@ -98,8 +106,10 @@ function gameover() {
     removeElement('playground');
     addElement('score-Board');
     gamePlay = false ;
+    screen.style.background =`linear-gradient(#FFFFFFB3 100%,red)`;
+
     // update score
     const lastScore = getTxtValue('score');
     setValue('last-score', lastScore);
 
-}
+};
